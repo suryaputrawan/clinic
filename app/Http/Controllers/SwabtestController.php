@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Nationality;
 use App\Swabtest;
 use App\Dokter;
@@ -143,7 +144,8 @@ class SwabtestController extends Controller
 
     public function exportPdf(Swabtest $swabtest)
     {
-        $pdf = PDF::loadview('swab.swab_pdf', compact('swabtest'))->setPaper('A4', 'potrait');
+        $company = Company::all();
+        $pdf = PDF::loadview('swab.swab_pdf', compact('swabtest', 'company'))->setPaper('A4', 'potrait');
         return $pdf->stream();
         //return $pdf->download('Surat Keterangan Swabtest');
     }

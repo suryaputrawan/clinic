@@ -91,8 +91,8 @@
           </tr>
         </table>
 
-        <br><p>Pasien telah menjalani pemeriksaan RT-PCR SARS-COV-2 yang dilakukan oleh tim Siloam Medika Canggu<br>
-        <i>Patient underwent the following RT-PCR SARS-COV-2 at Siloam Medika Canggu</i><br><br></p>
+        <br><p>Pasien telah menjalani pemeriksaan RT-PCR SARS-COV-2 yang dilakukan oleh tim {{ $company->alias }}<br>
+        <i>Patient underwent the following RT-PCR SARS-COV-2 at {{ $company->alias }}</i><br><br></p>
 
         <table style="border-collapse: collapse" border="3" width="650px">
           <thead style="background-color: gray">
@@ -128,7 +128,7 @@
 
         <div style="width: 50%; text-align: left; float: left;">Badung Bali, {{ $tanggal_surat }}</div><br><br><br><br><br><br>
         <div style="width: 50%; text-align: left; float: left;"><strong><u>{{ $swabtest->dokter->doktername }}</u></strong></div><br>
-        <div style="width: 50%; text-align: left; float: left;"><strong>RMO Siloam Medika Canggu</strong></div>
+        <div style="width: 50%; text-align: left; float: left;"><strong>RMO {{ $company->alias }}</strong></div>
 
     </div>
 </body>

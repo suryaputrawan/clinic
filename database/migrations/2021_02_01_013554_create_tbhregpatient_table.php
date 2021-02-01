@@ -14,7 +14,7 @@ class CreateTbhregpatientTable extends Migration
     public function up()
     {
         Schema::create('tbhRegPatient', function (Blueprint $table) {
-            $table->string('patNRM', 11)->primary();
+            $table->string('patNRM', 11);
             $table->string('patidCardNo', 20);
             $table->date('patRegDate')->nullable();
             $table->string('patSurename', 50);

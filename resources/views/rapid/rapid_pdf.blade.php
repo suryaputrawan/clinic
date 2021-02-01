@@ -84,8 +84,8 @@
           </tr>
         </table>
 
-        <br><p>Pasien telah menjalani pemeriksaan Rapid Test Covid-19 yang dilakukan oleh tim Siloam Medika Canggu<br>
-        <i>Patient underwent the following Rapid test of Covid-19 at Siloam Medika Canggu</i><br><br></p>
+        <br><p>Pasien telah menjalani pemeriksaan Rapid Test Covid-19 yang dilakukan oleh tim {{ $company->alias }}<br>
+        <i>Patient underwent the following Rapid test of Covid-19 at {{ $company->alias }}</i><br><br></p>
 
         <table style="border-collapse: collapse" border="3" width="650px">
           <thead style="background-color: gray">
@@ -115,7 +115,7 @@
 
         <div style="width: 50%; text-align: left; float: left;">Badung Bali, {{ $tanggal}}</div><br><br><br><br><br><br>
         <div style="width: 50%; text-align: left; float: left;"><strong><u>{{ $rapid->dokter->doktername }}</u></strong></div><br>
-        <div style="width: 50%; text-align: left; float: left;"><strong>RMO Siloam Medika Canggu</strong></div>
+        <div style="width: 50%; text-align: left; float: left;"><strong>RMO {{ $company->alias }}</strong></div>
 
     </div>
 </body>

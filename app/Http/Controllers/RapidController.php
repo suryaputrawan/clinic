@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Dokter;
 use App\Rapid;
 use App\Labstaff;
@@ -138,7 +139,8 @@ class RapidController extends Controller
 
     public function exportPdf(Rapid $rapid)
     {
-        $pdf = PDF::loadview('rapid.rapid_pdf', compact('rapid'))->setPaper('A4', 'potrait');
+        $company = Company::all()->first();
+        $pdf = PDF::loadview('rapid.rapid_pdf', compact('rapid', 'company'))->setPaper('A4', 'potrait');
         return $pdf->stream();
         //return $pdf->download('Surat Keterangan Rapid');
     }
