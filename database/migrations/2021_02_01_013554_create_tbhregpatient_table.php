@@ -24,7 +24,8 @@ class CreateTbhregpatientTable extends Migration
             $table->string('patAddres', 150)->nullable();
             $table->string('patPhone', 30)->nullable();
             $table->string('patEmail', 40)->nullable();
-            $table->foreignId('nation_nationID');
+            $table->foreignId('nationality_nationID');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

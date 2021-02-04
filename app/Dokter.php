@@ -11,6 +11,10 @@ class Dokter extends Model
     //mendeklarasikan nama field yang dijadikan primary key pada tabel
     protected $primaryKey = 'dokterID';
 
+    protected $fillable = [
+        'doktername', 'dokterAddr', 'dokterTelp', 'dokterEmail',
+    ];
+
     public function rapid()
     {
         return $this->hasMany(Rapid::class);

@@ -26,7 +26,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('arrival', 'ArrivalController@index')->name('arrival');
 
     Route::get('patient', 'PatientController@index')->name('patient');
+    Route::get('patient/create', 'PatientController@create')->name('patient.create');
+    Route::post('patient/store', 'PatientController@store')->name('patient.store');
+    Route::get('patient/{patient}/edit', 'PatientController@edit')->name('patient.edit');
+    Route::post('patient/{patient}/update', 'PatientController@update')->name('patient.update');
+    Route::get('patient/{patient}/delete', 'PatientController@delete')->name('patient.delete');
     Route::get('patient/{patient}/detail', 'PatientController@detail')->name('patient.detail');
+
+    Route::get('dokter', 'DokterController@index')->name('dokter');
+    Route::get('dokter/create', 'DokterController@create')->name('dokter.create');
+    Route::post('dokter/store', 'DokterController@store')->name('dokter.store');
+    Route::get('dokter/{dokter}/edit', 'DokterController@edit')->name('dokter.edit');
+    Route::post('dokter/{dokter}/update', 'DokterController@update')->name('dokter.update');
+    Route::get('dokter/{dokter}/delete', 'DokterController@delete')->name('dokter.delete');
+    Route::get('dokter/{dokter}/detail', 'DokterController@detail')->name('dokter.detail');
 
     Route::get('search/swabtest', 'SearchController@swabtest')->name('search.swabtest');
     Route::get('search/rapidtest', 'SearchController@rapidtest')->name('search.rapidtest');

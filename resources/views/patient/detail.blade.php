@@ -14,7 +14,6 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a href="#">Clinic Support</a></li>
                     <li><a href="{{ route('patient') }}">Patients</a></li>
                     <li class="active">Detail Patient</li>
                 </ol>
@@ -44,10 +43,8 @@
           <?php
           $date = strtotime($patient->patDOB);
           $date2 = strtotime($patient->patRegDate);
-          $date3 = strtotime($patient->patlastarvdate);
           $patDOB = date('d M Y',$date);
           $patRegDate = date('d M Y',$date2);
-          $patlastarvdate = date('d M Y',$date3);
           ?>
           <!-- End Merubah Format tanggal yang ditampilkan -->
           <tr>
@@ -89,11 +86,6 @@
             <td style="width: 30%"><strong>Registration Date</strong></td>
             <td style="width: 2%"><strong>:</strong></td>
             <td style="width: 65%">{{ $patRegDate }}</td>
-          </tr>
-          <tr>
-            <td style="width: 30%"><strong>Last Arrival</strong></td>
-            <td style="width: 2%"><strong>:</strong></td>
-            <td style="width: 65%">{{ $patlastarvdate }}</td>
           </tr>
         </table>
       </div>

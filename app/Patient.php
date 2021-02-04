@@ -16,6 +16,12 @@ class Patient extends Model
 
     public $incrementing = 'false';
 
+    protected $fillable = [
+        'patNRM', 'patidCardNo', 'patRegDate', 'patSurename', 'patGivenname',
+        'patDOB', 'patSex', 'patAddres', 'patPhone', 'patEmail',
+        'nationality_nationID', 'user_id',
+    ];
+
     public function rapid()
     {
         return $this->hasMany(Rapid::class);

@@ -20,19 +20,19 @@ class DashboardController extends Controller
         //Membuat string tahun
         $tahun = Carbon::now()->subYear()->format('Y');
         (string) $tahun;
-        $thSekarang = Carbon::now()->year()->format('Y');
+        $thSekarang = Carbon::now()->format('Y');
         (string) $thSekarang;
         $th2Lalu = Carbon::now()->subYear(2)->format('Y');
         (string) $th2Lalu;
 
         //Data Rapid Test
         $rapid = Rapid::select(DB::raw('COUNT(*) as count'))
-            ->whereYear('tanggal', $year)
+            ->whereYear('tanggal', $yearNow)
             ->groupBy(DB::raw("Month(tanggal)"))
             ->pluck('count');
 
         $months = Rapid::select(DB::raw("Month(tanggal) as month"))
-            ->whereYear('tanggal', $year)
+            ->whereYear('tanggal', $yearNow)
             ->groupBy(DB::raw("Month(tanggal)"))
             ->pluck('month');
 
@@ -45,12 +45,12 @@ class DashboardController extends Controller
 
         //Data Swabtest
         $swabtest = Swabtest::select(DB::raw('COUNT(*) as count'))
-            ->whereYear('tanggal_sampling', $year)
+            ->whereYear('tanggal_sampling', $yearNow)
             ->groupBy(DB::raw("Month(tanggal_sampling)"))
             ->pluck('count');
 
         $swabMonths = Swabtest::select(DB::raw("Month(tanggal_sampling) as month"))
-            ->whereYear('tanggal_sampling', $year)
+            ->whereYear('tanggal_sampling', $yearNow)
             ->groupBy(DB::raw("Month(tanggal_sampling)"))
             ->pluck('month');
 
@@ -63,12 +63,12 @@ class DashboardController extends Controller
 
         //Data Antigen
         $antigen = Antigen::select(DB::raw('COUNT(*) as count'))
-            ->whereYear('tanggal', $year)
+            ->whereYear('tanggal', $yearNow)
             ->groupBy(DB::raw("Month(tanggal)"))
             ->pluck('count');
 
         $antigenMonths = Antigen::select(DB::raw("Month(tanggal) as month"))
-            ->whereYear('tanggal', $year)
+            ->whereYear('tanggal', $yearNow)
             ->groupBy(DB::raw("Month(tanggal)"))
             ->pluck('month');
 
