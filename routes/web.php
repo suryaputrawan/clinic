@@ -25,6 +25,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('arrival', 'ArrivalController@index')->name('arrival');
 
+    Route::get('company', 'CompanyController@index')->name('company');
+    Route::get('company/{company}/edit', 'CompanyController@edit')->name('company.edit');
+    Route::post('company/{company}/update', 'CompanyController@update')->name('company.update');
+
     Route::get('patient', 'PatientController@index')->name('patient');
     Route::get('patient/create', 'PatientController@create')->name('patient.create');
     Route::post('patient/store', 'PatientController@store')->name('patient.store');

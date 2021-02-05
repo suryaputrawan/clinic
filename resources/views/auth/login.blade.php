@@ -33,7 +33,7 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <img class="align-content" src="#" alt="MY CLINIC">
+                        <img style="display:block; margin-left:auto; margin-right:auto; width:auto; max-width:100%; height:200px;" class="align-content" src="{{ asset('storage/images/picture/logo.png') }}" alt="MY CLINIC">
                     </a>
                 </div>
                 <div class="login-form">

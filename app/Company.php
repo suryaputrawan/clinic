@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Company extends Model
 {
@@ -10,5 +11,11 @@ class Company extends Model
 
     protected $fillable = [
         'name', 'alias', 'address',
+        'telphone', 'npwp', 'logo',
     ];
+
+    public function getTakeImageAttribute()
+    {
+        return "Storage/" . $this->logo;
+    }
 }

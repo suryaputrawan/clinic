@@ -4,13 +4,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand" href="{{ route('dashboard') }}"><img src="#" alt="MY CLINIC"></a>
-      <a class="navbar-brand hidden" href="{{ route('dashboard') }}"><img src="#" alt="Logo"></a>
+      <a class="navbar-brand" href="{{ route('dashboard') }}"><img style="display:block; margin-left:auto; margin-right:auto; width:auto; max-width:100%; height:120px;" src="{{ asset('storage/images/picture/logo.png') }}" alt="MY CLINIC"></a>
+      <a class="navbar-brand hidden" href="{{ route('dashboard') }}"><i class="menu-icon fa fa-hospitals"></i></a>
     </div>
     <div id="main-menu" class="main-menu collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-            <a href="{{ route('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+            <a href="{{ route('dashboard') }}"><i class="menu-icon fa fa-dashboard"></i>Dashboard</a>
         </li>
 
         <h3 class="menu-title">COVID-19</h3><!-- /.menu-title -->
@@ -32,6 +32,12 @@
             <li><i class="menu-icon fa fa-user-md"></i><a href="{{ route('dokter') }}">Doctor</a></li>
           </ul>
         </li>
+        <li class="menu-item-has-children dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-building"></i>Profil Company</a>
+            <ul class="sub-menu children dropdown-menu">
+              <li><i class="menu-icon fa fa-home"></i><a href="{{ route('company') }}">Company</a></li>
+            </ul>
+          </li>
         <li class="menu-item-has-children dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text"></i>Report</a>
           <ul class="sub-menu children dropdown-menu">

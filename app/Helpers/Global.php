@@ -1,6 +1,7 @@
 <?php
 
 use App\Antigen;
+use App\Company;
 use App\Patient;
 use App\Rapid;
 use App\Serology;

@@ -18,7 +18,7 @@ class CreateCompanyTable extends Migration
             $table->string('name');
             $table->string('alias');
             $table->string('address');
-            $table->string('telphone', 15)->nullable();
+            $table->string('telphone', 15);
             $table->string('npwp', 30)->nullable();
             $table->string('logo')->nullable();
             $table->timestamps();

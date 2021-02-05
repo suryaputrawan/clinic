@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         $year = Carbon::now()->subYear()->format('Y');
-        $yearNow = Carbon::now()->year()->format('Y');
+        $yearNow = Carbon::now()->format('Y');
         $year2 = Carbon::now()->subYear(2)->format('Y');
 
         //Membuat string tahun
