@@ -25,12 +25,16 @@ class CompanyController extends Controller
             'name' => 'required',
             'alias' => 'required',
             'address' => 'required',
+            'kabupaten' => 'required',
+            'provinsi' => 'required',
             'telphone' => 'required',
             'logo' => 'image|mimes:jpg,jpeg,png,svg|max:2048',
         ], [
             'name.required' => 'Masukkan nama perusahaan',
             'alias.required' => 'Masukkan nama Clinic atau Rumah Sakit',
             'address.required' => 'Masukkan alamat perusahaan',
+            'kabupaten.required' => 'Masukkan lokasi kabupaten',
+            'provinsi.required' => 'Masukkan lokasi provinsi',
             'telphone.required' => 'Masukkan nomor telphone',
         ]);
 

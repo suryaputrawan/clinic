@@ -10,7 +10,7 @@ class Company extends Model
     protected $table = 'company';
 
     protected $fillable = [
-        'name', 'alias', 'address',
+        'name', 'alias', 'address', 'kabupaten', 'provinsi',
         'telphone', 'npwp', 'logo',
     ];
 

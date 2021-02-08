@@ -71,6 +71,22 @@
                 </div>
             </div>
             <div class="row form-group">
+                <div class="col col-md-3"><label for="kabupaten" class=" form-control-label">Kabupaten</label></div>
+                <div class="col-12 col-md-9"><input type="text" id="kabupaten" name="kabupaten" placeholder="Kabupaten" class="form-control @error('kabupaten') is-invalid @enderror" value="{{ old('kabupaten', $company->kabupaten) }}" autocomplete="off">
+                    @error('kabupaten')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><label for="provinsi" class=" form-control-label">Provinsi</label></div>
+                <div class="col-12 col-md-9"><input type="text" id="provinsi" name="provinsi" placeholder="Provinsi" class="form-control @error('provinsi') is-invalid @enderror" value="{{ old('provinsi', $company->provinsi) }}" autocomplete="off">
+                    @error('provinsi')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="row form-group">
                 <div class="col col-md-3"><label for="telphone" class=" form-control-label">Telephone / HP</label></div>
                 <div class="col-12 col-md-9"><input type="text" id="telphone" name="telphone" placeholder="Telphone" class="form-control" value="{{ old('telphone', $company->telphone) }}" autocomplete="off"></div>
             </div>

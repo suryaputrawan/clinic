@@ -133,7 +133,7 @@ class AntigenController extends Controller
     {
         $company = Company::all()->first();
 
-        $pdf = PDF::loadview('antigen.antigen_pdf', compact('antigen'))->setPaper('A4', 'potrait');
+        $pdf = PDF::loadview('antigen.antigen_pdf', compact('antigen', 'company'))->setPaper('A4', 'potrait');
         return $pdf->stream();
     }
 }

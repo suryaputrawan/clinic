@@ -18,6 +18,8 @@ class CreateCompanyTable extends Migration
             $table->string('name');
             $table->string('alias');
             $table->string('address');
+            $table->string('kabupaten', 100);
+            $table->string('provinsi', 100);
             $table->string('telphone', 15);
             $table->string('npwp', 30)->nullable();
             $table->string('logo')->nullable();

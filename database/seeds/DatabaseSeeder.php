@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(PlebotomisTableSeeder::class);
         $this->call(UserTableSeeder::class);
         $this->call(CompanyTableSeeder::class);
+        $this->call(RapidtestTableSeeder::class);
+        $this->call(SwabTableSeeder::class);
+        $this->call(AntigenTableSeeder::class);
     }
 }

@@ -113,7 +113,7 @@
         <br><p>Demikian Surat Keterangan ini dibuat untuk dipergunakan sebagaimana mestinya. <br>
         <i>This Statement Letter is a verification of examination and results.</i></p><br><br>
 
-        <div style="width: 50%; text-align: left; float: left;">Badung Bali, {{ $tanggal}}</div><br><br><br><br><br><br>
+        <div style="width: 50%; text-align: left; float: left;">{{ $company->kabupaten }} {{ $company->provinsi }}, {{ $tanggal}}</div><br><br><br><br><br><br>
         <div style="width: 50%; text-align: left; float: left;"><strong><u>{{ $rapid->dokter->doktername }}</u></strong></div><br>
         <div style="width: 50%; text-align: left; float: left;"><strong>RMO {{ $company->alias }}</strong></div>
 
