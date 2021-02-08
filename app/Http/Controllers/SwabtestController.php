@@ -144,7 +144,8 @@ class SwabtestController extends Controller
 
     public function exportPdf(Swabtest $swabtest)
     {
-        $company = Company::all();
+        $company = Company::all()->first();
+
         $pdf = PDF::loadview('swab.swab_pdf', compact('swabtest', 'company'))->setPaper('A4', 'potrait');
         return $pdf->stream();
         //return $pdf->download('Surat Keterangan Swabtest');

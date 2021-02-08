@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Surat Keterangan Swabtest</title>
+    <title>Surat Keterangan PCR-Swabtest</title>
     <meta charset="utf-8">
     <style>
       /* body{
@@ -73,7 +73,7 @@
             <tr>
               <td style="width: 30%;">Jenis Kelamin / <i>Sex</i></td>
               <td style="width: 5%;">:</td>
-              <td style="width: 65%;">{{ ($swabtest->patient->patSex) == "M" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
+              <td style="width: 65%;">{{ ($swabtest->patient->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
             </tr>
             <tr>
               <td style="width: 30%;">Kebangsaan / <i>Nationality</i></td>

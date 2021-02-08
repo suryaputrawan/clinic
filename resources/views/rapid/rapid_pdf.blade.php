@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Surat Keterangan Rapid</title>
+    <title>Surat Keterangan Rapidtest</title>
     <meta charset="utf-8">
     <style>
        /* body{
@@ -66,7 +66,7 @@
             <tr>
               <td style="width: 30%;">Jenis Kelamin / <i>Sex</i></td>
               <td style="width: 5%;">:</td>
-              <td style="width: 65%;">{{ ($rapid->patient->patSex) == "M" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
+              <td style="width: 65%;">{{ ($rapid->patient->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
             </tr>
             <tr>
               <td style="width: 30%;">Kebangsaan / <i>Nationality</i></td>

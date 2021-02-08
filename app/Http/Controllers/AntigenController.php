@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Antigen;
+use App\Company;
 use App\Dokter;
 use App\Labstaff;
 use App\Nationality;
@@ -130,6 +131,8 @@ class AntigenController extends Controller
 
     public function exportPdf(Antigen $antigen)
     {
+        $company = Company::all()->first();
+
         $pdf = PDF::loadview('antigen.antigen_pdf', compact('antigen'))->setPaper('A4', 'potrait');
         return $pdf->stream();
     }

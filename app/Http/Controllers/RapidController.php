@@ -140,6 +140,7 @@ class RapidController extends Controller
     public function exportPdf(Rapid $rapid)
     {
         $company = Company::all()->first();
+
         $pdf = PDF::loadview('rapid.rapid_pdf', compact('rapid', 'company'))->setPaper('A4', 'potrait');
         return $pdf->stream();
         //return $pdf->download('Surat Keterangan Rapid');

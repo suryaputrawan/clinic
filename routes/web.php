@@ -23,6 +23,7 @@ Route::post('postregister', 'RegisterController@postregister')->name('postregist
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('about', 'AboutController@index')->name('about');
     Route::get('arrival', 'ArrivalController@index')->name('arrival');
 
     Route::get('company', 'CompanyController@index')->name('company');

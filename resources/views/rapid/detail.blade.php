@@ -68,7 +68,7 @@
           <tr>
             <td style="width: 30%"><strong>Jenis Kelamin</strong></td>
             <td style="width: 2%"><strong>:</strong></td>
-            <td style="width: 65%">{{ ($rapid->patient->patSex) == "M" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
+            <td style="width: 65%">{{ ($rapid->patient->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
           </tr>
           <tr>
             <td style="width: 30%"><strong>Identification Number</strong></td>

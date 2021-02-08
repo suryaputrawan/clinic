@@ -4,7 +4,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand" href="{{ route('dashboard') }}"><img style="display:block; margin-left:auto; margin-right:auto; width:auto; max-width:100%; height:120px;" src="{{ asset('storage/images/picture/logo.png') }}" alt="MY CLINIC"></a>
+      <a class="navbar-brand" href="{{ route('dashboard') }}"><img style="display:block; margin-left:auto; margin-right:auto; width:auto; max-width:100%; height:80px;" src="{{ asset('storage/images/picture/logo.png') }}" alt="MY CLINIC"></a>
       <a class="navbar-brand hidden" href="{{ route('dashboard') }}"><i class="menu-icon fa fa-hospitals"></i></a>
     </div>
     <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -37,13 +37,18 @@
             <ul class="sub-menu children dropdown-menu">
               <li><i class="menu-icon fa fa-home"></i><a href="{{ route('company') }}">Company</a></li>
             </ul>
-          </li>
-        <li class="menu-item-has-children dropdown">
+        </li>
+        <li>
+            <a href="{{ route('about') }}"><i class="menu-icon fa fa-user"></i>About</a>
+        </li>
+           
+        <!-- <li class="menu-item-has-children dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text"></i>Report</a>
           <ul class="sub-menu children dropdown-menu">
             <li><i class="menu-icon fa fa-file"></i><a href="{{ route('report') }}">Rapid & Swabtest</a></li>
           </ul>
-        </li>
+        </li> -->
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
