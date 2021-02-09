@@ -5,11 +5,12 @@
 @section('search')
   <div class="header-left">
     <form action="{{ route('search.patient') }}" method="GET" class="search-form">
+        @csrf
       <div class="row form-group">
         <div class="col col-md-12">
           <div class="input-group">
             <div class="input-group-btn">
-              <button class="btn btn-primary">
+              <button type="submit" class="btn btn-primary">
                 <i class="fa fa-search"></i>
               </button>
             </div>

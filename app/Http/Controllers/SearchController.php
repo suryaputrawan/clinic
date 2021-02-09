@@ -156,12 +156,16 @@ class SearchController extends Controller
 
     public function patient(Request $request)
     {
-        $patient = Patient::where("patSurename", "like", "%{$request->keyword}%")
-            ->orWhere("patGivenname", "like", "%{$request->keyword}%")
-            ->orWhere("patNRM", "like", "%{$request->keyword}%")
+        $keyword = $request->keyword;
+
+        $patient = Patient::where('patNRM', 'like', "%" . $keyword . "%")
+            ->orWhere('patGivenname', 'like', "%" . $keyword . "%")
+            ->orWhere('patSurename', 'like', "%" . $keyword . "%")
             ->orderBy('patNRM', 'DESC')->paginate(20);
 
         $patient->appends($request->only('keyword'));
+
+        dd($keyword);
 
         return view('patient.index', compact('patient'));
     }
