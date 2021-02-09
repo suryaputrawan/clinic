@@ -165,8 +165,6 @@ class SearchController extends Controller
 
         $patient->appends($request->only('keyword'));
 
-        dd($keyword);
-
         return view('patient.index', compact('patient'));
     }
 }
