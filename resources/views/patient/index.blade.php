@@ -5,7 +5,6 @@
 @section('search')
   <div class="header-left">
     <form action="{{ route('search.patient') }}" method="GET" class="search-form">
-        @csrf
       <div class="row form-group">
         <div class="col col-md-12">
           <div class="input-group">
@@ -14,7 +13,7 @@
                 <i class="fa fa-search"></i>
               </button>
             </div>
-            <input type="text" id="keyword" name="keyword" placeholder="Search MRN / PATIENT NAME" class="form-control" autocomplete="off">
+            <input type="text" value="{{ Request::get('keyword') }}" name="keyword" placeholder="Search MRN / PATIENT NAME" class="form-control" autocomplete="off">
           </div>
         </div>
       </div>
