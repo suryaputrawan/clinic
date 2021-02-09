@@ -8,17 +8,21 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class ReportSwabExport implements FromView, ShouldAutoSize
 {
-  private $results;
+    private $results;
 
-  public function __construct($results)
-  {
-    $this->results = $results;
-  }
+    public function __construct($results)
+    {
+        $this->results = $results;
+    }
 
-  public function view(): View
-  {
-    return view('report.exports.swabtest_xlsx', [
-      'swabtest' => $this->results,
-    ]);
-  }
+    public function view(): View
+    {
+        return view('report.exports.swabtest_xlsx', [
+            'swabtest' => $this->results,
+            'dokter' => $this->results,
+            'laboratorium' => $this->results,
+            'patient' => $this->results,
+            'nationality' => $this->results,
+        ]);
+    }
 }

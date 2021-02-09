@@ -46,52 +46,59 @@
           @csrf
           <div class="row form-group">
             <div class="col col-md-3"><label for="tanggal_sampling" class=" form-control-label">Tanggal Pengambilan Swabtest</label></div>
-            <div class="col-12 col-md-9"><input type="date" id="tanggal_sampling" name="tanggal_sampling" placeholder="Text" class="form-control @error('tanggal_sampling') is-invalid @enderror" value="{{ old('tanggal_sampling') }}"></div>
-            @error('tanggal_sampling')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="date" id="tanggal_sampling" name="tanggal_sampling" placeholder="Text" class="form-control @error('tanggal_sampling') is-invalid @enderror" value="{{ old('tanggal_sampling') }}">
+                @error('tanggal_sampling')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="tanggal_validasi" class=" form-control-label">Tanggal Validasi Swabtest</label></div>
-            <div class="col-12 col-md-9"><input type="date" id="tanggal_validasi" name="tanggal_validasi" placeholder="Text" class="form-control @error('tanggal_validasi') is-invalid @enderror" value="{{ old('tanggal_validasi') }}"></div>
-            @error('tanggal_validasi')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="date" id="tanggal_validasi" name="tanggal_validasi" placeholder="Text" class="form-control @error('tanggal_validasi') is-invalid @enderror" value="{{ old('tanggal_validasi') }}">
+                @error('tanggal_validasi')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="waktu_validasi" class=" form-control-label">Waktu Validasi</label></div>
-            <div class="col-12 col-md-9"><input type="time" id="waktu_validasi" name="waktu_validasi" placeholder="Text" class="form-control @error('waktu_validasi') is-invalid @enderror" value="{{ old('waktu_validasi') }}"></div>
-            @error('waktu_validasi')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="time" id="waktu_validasi" name="waktu_validasi" placeholder="Text" class="form-control @error('waktu_validasi') is-invalid @enderror" value="{{ old('waktu_validasi') }}">
+                @error('waktu_validasi')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="tanggal_surat" class=" form-control-label">Tanggal Surat Swabtest</label></div>
-            <div class="col-12 col-md-9"><input type="date" id="tanggal_surat" name="tanggal_surat" placeholder="Text" class="form-control @error('tanggal_surat') is-invalid @enderror" value="{{ old('tanggal_surat') }}"></div>
-            @error('tanggal_surat')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="date" id="tanggal_surat" name="tanggal_surat" placeholder="Text" class="form-control @error('tanggal_surat') is-invalid @enderror" value="{{ old('tanggal_surat') }}">
+                @error('tanggal_surat')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="nosurat" class=" form-control-label">Nomor Surat</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="nosurat" name="nosurat" placeholder="Masukkan Nomor Surat" class="form-control @error('nosurat') is-invalid @enderror" value="{{ old('nosurat') }}" autocomplete="off"></div>
-            @error('nosurat')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="text" id="nosurat" name="nosurat" placeholder="Masukkan Nomor Surat" class="form-control @error('nosurat') is-invalid @enderror" value="{{ old('nosurat') }}" autocomplete="off">
+                @error('nosurat')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="nrm" class=" form-control-label">NRM Patient</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="nrm" name="patient_patNRM" placeholder="Masukkan 6 angka MRN Pasein" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM') }}" autocomplete="off"></div>
-            @error('patient_patNRM')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="text" id="nrm" name="patient_patNRM" placeholder="Masukkan 6 angka MRN Pasein" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM') }}" autocomplete="off">
+                @error('patient_patNRM')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="pob" class=" form-control-label">Tempat Lahir</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="pob" name="pob" placeholder="Place Of Birth" class="form-control @error('pob') is-invalid @enderror" value="{{ old('pob') }}" autocomplete="off"></div>
-            @error('pob')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <div class="col-12 col-md-9"><input type="text" id="pob" name="pob" placeholder="Place Of Birth" class="form-control @error('pob') is-invalid @enderror" value="{{ old('pob') }}" autocomplete="off">
+                @error('pob')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="nationality" class=" form-control-label">Nationality</label></div>

@@ -46,6 +46,7 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">NAMA STAFF</th>
+                    <th scope="col">ACTION</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +54,10 @@
                     <tr>
                       <td>{{ $plebotomis->firstItem() + $key }}</td>
                       <td>{{ $plebo->name }}</td>
+                      <td>
+                        <a href="{{ route('plebotomis.edit', $plebo->id) }}" class="btn btn-sm btn-primary">
+                            <i class="fa fa-edit"></i></a>
+                      </td>
                     </tr>
                   @endforeach
                 </tbody>

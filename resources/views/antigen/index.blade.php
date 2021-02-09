@@ -69,9 +69,10 @@
             <a href="#" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
               <i class="fa fa-filter"> Filter</i></a>
             <!-- End Button trigger modal -->
-
-              <a href="{{ route('report.antigen',['tglawal'=>$tglawal ?? '','tglakhir' =>$tglakhir ?? '']) }}" class="btn btn-sm btn-outline-success">
+            
+            <a href="{{ route('report.antigen',['tglawal'=>$tglawal ?? '','tglakhir' =>$tglakhir ?? '']) }}" class="btn btn-sm btn-outline-success">
               <i class="fa fa-download"> To Excel</i></a>
+              
           </div>
           <div class="pull-right">
             <a href="{{ route('antigen.create') }}" class="btn btn-sm btn-info">

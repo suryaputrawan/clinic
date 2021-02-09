@@ -75,10 +75,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('plebotomis', 'PlebotomisController@index')->name('plebotomis');
     Route::get('plebotomis/create', 'PlebotomisController@create')->name('plebotomis.create');
     Route::post('plebotomis/store', 'PlebotomisController@store')->name('plebotomis.store');
+    Route::get('plebotomis/{plebotomis}/edit', 'PlebotomisController@edit')->name('plebotomis.edit');
+    Route::post('plebotomis/{plebotomis}/update', 'PlebotomisController@update')->name('plebotomis.update');
 
     Route::get('labstaff', 'LabstaffController@index')->name('labstaff');
     Route::get('labstaff/create', 'LabstaffController@create')->name('labstaff.create');
     Route::post('labstaff/store', 'LabstaffController@store')->name('labstaff.store');
+    Route::get('labstaff/{labstaff}/edit', 'LabstaffController@edit')->name('labstaff.edit');
+    Route::post('labstaff/{labstaff}/update', 'LabstaffController@update')->name('labstaff.update');
 
     Route::get('lab', 'LaboratoriumController@index')->name('lab');
     Route::get('lab/create', 'LaboratoriumController@create')->name('lab.create');

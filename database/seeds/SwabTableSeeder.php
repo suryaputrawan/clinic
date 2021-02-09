@@ -12,6 +12,7 @@ class SwabTableSeeder extends Seeder
      */
     public function run()
     {
+        //seeder
         Swabtest::create([
             'tanggal_sampling' => '2021-01-03',
             'tanggal_validasi' => '2021-01-04',

@@ -19,6 +19,11 @@ class ReportRapidExport implements FromView, ShouldAutoSize
     {
         return view('report.exports.rapidtest_xlsx', [
             'rapid' => $this->results,
+            'dokter' => $this->results,
+            'plebotomis' => $this->results,
+            'nationality' => $this->results,
+            'labstaff' => $this->results,
+            'patient' => $this->results,
         ]);
     }
 }

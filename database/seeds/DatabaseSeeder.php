@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
             PlebotomisTableSeeder::class,
             UserTableSeeder::class,
             CompanyTableSeeder::class,
+            RapidTableSeeder::class,
             SwabTableSeeder::class,
             AntigenTableSeeder::class,
-            RapidtestTableSeeder::class,
         ]);
     }
 }

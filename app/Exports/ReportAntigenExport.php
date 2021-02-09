@@ -19,6 +19,11 @@ class ReportAntigenExport implements FromView, ShouldAutoSize
     {
         return view('report.exports.antigen_xlsx', [
             'antigen' => $this->results,
+            'dokter' => $this->results,
+            'plebotomis' => $this->results,
+            'nationality' => $this->results,
+            'labstaff' => $this->results,
+            'patient' => $this->results,
         ]);
     }
 }

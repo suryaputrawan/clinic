@@ -35,4 +35,14 @@ class LabstaffController extends Controller
 
         return redirect()->route('labstaff')->with('sukses', 'Data Success to Created');
     }
+
+    public function edit(Labstaff $labstaff)
+    {
+        return view('labstaff.edit', compact('labstaff'));
+    }
+
+    public function update(Request $request, Labstaff $labstaff)
+    {
+        # code...
+    }
 }

@@ -39,4 +39,25 @@ class PlebotomisController extends Controller
 
         return redirect()->route('plebotomis')->with('sukses', 'Data Success to Created');
     }
+
+    public function edit(Plebotomis $plebotomis)
+    {
+        return view('plebotomis.edit', compact('plebotomis'));
+    }
+
+    public function update(Request $request, Plebotomis $plebotomis)
+    {
+        $request->validate([
+            'name' => 'required',
+        ], [
+            'name.required' => 'Masukkan nama petugas plebotomis',
+        ]);
+
+        $plebotomis->update([
+            'name' => $request->name,
+            'user_id' => auth()->user()->id,
+        ]);
+
+        return redirect()->route('plebotomis')->with('sukses', 'Data was Updated !');
+    }
 }

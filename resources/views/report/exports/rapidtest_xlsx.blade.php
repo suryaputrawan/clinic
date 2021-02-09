@@ -24,16 +24,16 @@
       <td>{{ $item->tanggal }}</td>
       <td>{{ $item->nosurat }}</td>
       <td>{{ $item->patient_patNRM }}</td>
-      <td>{{ $item->patGivenname }} {{ $item->patSurename }}</td>
-      <td>{{ ($item->patSex) == "M" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
+      <td>{{ $item->patient->patGivenname }} {{ $item->patient->patSurename }}</td>
+      <td>{{ ($item->patient->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
       <td>{{ $item->pob }}</td>
-      <td>{{ $item->patidCardNo }}</td>
-      <td>{{ $item->patPhone }}</td>
-      <td>{{ $item->patAddressH }}</td>
-      <td>{{ $item->nationName }}</td>
-      <td>{{ $item->doktername }}</td>
-      <td>{{ $item->pleboname }}</td>
-      <td>{{ $item->labstaffname }}</td>
+      <td>{{ $item->patient->patidCardNo }}</td>
+      <td>{{ $item->patient->patPhone }}</td>
+      <td>{{ $item->patient->patAddres }}</td>
+      <td>{{ $item->nationality->nationName }}</td>
+      <td>{{ $item->dokter->doktername }}</td>
+      <td>{{ $item->plebotomis->name }}</td>
+      <td>{{ $item->labstaff->name }}</td>
       <td>{{ $item->result }}</td>
       <td>{{ $item->remarks }}</td>
     </tr>

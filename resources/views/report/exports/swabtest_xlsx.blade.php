@@ -29,15 +29,15 @@
       <td>{{ $swab->tanggal_surat }}</td>
       <td>{{ $swab->nosurat }}</td>
       <td>{{ $swab->patient_patNRM }}</td>
-      <td>{{ $swab->patGivenname }} {{ $swab->patSurename }}</td>
-      <td>{{ ($swab->patSex) == "M" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
+      <td>{{ $swab->patient->patGivenname }} {{ $swab->patient->patSurename }}</td>
+      <td>{{ ($swab->patient->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
       <td>{{ $swab->pob }}</td>
-      <td>{{ $swab->patidCardNo }}</td>
-      <td>{{ $swab->patPhone }}</td>
-      <td>{{ $swab->patAddressH }}</td>
-      <td>{{ $swab->nationName}}</td>
-      <td>{{ $swab->doktername }}</td>
-      <td>{{ $swab->labname }}</td>
+      <td>{{ $swab->patient->patidCardNo }}</td>
+      <td>{{ $swab->patient->patPhone }}</td>
+      <td>{{ $swab->patient->patAddres }}</td>
+      <td>{{ $swab->nationality->nationName}}</td>
+      <td>{{ $swab->dokter->doktername }}</td>
+      <td>{{ $swab->laboratorium->name }}</td>
       <td>{{ $swab->result }}</td>
       <td>{{ $swab->remarks}}</td>
     </tr>

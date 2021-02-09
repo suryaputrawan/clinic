@@ -45,6 +45,7 @@
               <tr>
                 <th scope="col">No</th>
                 <th scope="col">NAMA STAFF</th>
+                <th scope="col">ACTION</th>
             </tr>
             </thead>
             <tbody>
@@ -52,6 +53,10 @@
                 <tr>
                   <td>{{ $labstaff->firstItem() + $key }}</td>
                   <td>{{ $lab->name }}</td>
+                  <td>
+                    <a href="{{ route('labstaff.edit', $lab->id) }}" class="btn btn-sm btn-primary">
+                        <i class="fa fa-edit"></i></a>
+                  </td>
                 </tr>
               @endforeach
             </tbody>
