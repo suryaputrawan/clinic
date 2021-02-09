@@ -1,5 +1,26 @@
 @extends('layouts.app')
 
+@section('title','PATIENT ')
+
+@section('search')
+  <div class="header-left">
+    <form action="{{ route('search.patient') }}" method="GET" class="search-form">
+      <div class="row form-group">
+        <div class="col col-md-12">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button class="btn btn-primary">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <input type="text" id="keyword" name="keyword" placeholder="Search MRN / PATIENT NAME" class="form-control" autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+@endsection
+
 @section('breadcrumbs')
   <div class="breadcrumbs">
     <div class="col-sm-4">
@@ -30,7 +51,11 @@
       <div class="col-lg-12">
         <div class="card">
           <div class="card-header">
-              <strong class="card-title">Data Patients</strong>
+              <div class="pull-left">
+                <strong class="card-title col-sm-6">Data Patients</strong>
+                <a href="{{ route('patient') }}" class="btn btn-sm btn-outline-secondary">
+                    <i class="fa fa-refresh"> Refresh</i></a>
+              </div>
               <a href="{{ route('patient.create') }}" class="btn btn-sm btn-primary float-right">Add Data</a>
           </div>
           <div class="card-body table-responsive">

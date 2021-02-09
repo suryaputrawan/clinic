@@ -22,13 +22,13 @@
               <li><i class="menu-icon fa fa-file-text-o"></i><a href="{{ route('antigen') }}">Antigen Swab</a></li>
             </ul>
         </li>
+        <li><a href="{{ route('patient') }}"><i class="menu-icon fa fa-user"></i>Patient</a></li>
         <li class="menu-item-has-children dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-gears"></i>Utilities</a>
           <ul class="sub-menu children dropdown-menu">
             <li><i class="menu-icon fa fa-user"></i><a href="{{ route('plebotomis') }}">Plebotomis</a></li>
             <li><i class="menu-icon fa fa-user"></i><a href="{{ route('labstaff') }}">Staff Lab</a></li>
             <li><i class="menu-icon fa fa-plus-square"></i><a href="{{ route('lab') }}">Laboratorium</a></li>
-            <li><i class="menu-icon fa fa-user"></i><a href="{{ route('patient') }}">Patient</a></li>
             <li><i class="menu-icon fa fa-user-md"></i><a href="{{ route('dokter') }}">Doctor</a></li>
           </ul>
         </li>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Antigen;
+use App\Patient;
 use App\Swabtest;
 use App\Rapid;
 use App\Serology;
@@ -51,7 +52,7 @@ class SearchController extends Controller
     public function antigen(Request $request)
     {
         $antigen = Antigen::whereHas('patient', function ($query) use ($request) {
-            $query->where("patSurename", "like", "%{$request->keyword}")
+            $query->where("patSurename", "like", "%{$request->keyword}%")
                 ->orWhere("patGivenname", "like", "%{$request->keyword}%")
                 ->orWhere("patient_patNRM", "like", "%{$request->keyword}%")
                 ->orWhere("nosurat", "like", "%{$request->keyword}%")
@@ -151,5 +152,17 @@ class SearchController extends Controller
         $serology->appends($request->only('tglawal', 'tglakhir'));
 
         return view('serology.index', compact('serology', 'tglawal', 'tglakhir'));
+    }
+
+    public function patient(Request $request)
+    {
+        $patient = Patient::where("patSurename", "like", "%{$request->keyword}%")
+            ->orWhere("patGivenname", "like", "%{$request->keyword}%")
+            ->orWhere("patNRM", "like", "%{$request->keyword}%")
+            ->orderBy('patNRM', 'DESC')->paginate(20);
+
+        $patient->appends($request->only('keyword'));
+
+        return view('patient.index', compact('patient'));
     }
 }

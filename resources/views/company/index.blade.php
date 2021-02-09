@@ -56,9 +56,6 @@
                   <td>{{ $com->alias }}</td>
                   <td>{{ $com->address }}</td>
                   <td>
-                    <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fa fa-eye"></i>
-                      </a>
                     <a href="{{ route('company.edit', $com->id) }}" class="btn btn-sm btn-primary">
                       <i class="fa fa-edit"></i>
                     </a>
