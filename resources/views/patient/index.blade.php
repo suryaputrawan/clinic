@@ -76,7 +76,7 @@
                         <td>{{ $patient->firstItem() + $key }}</td>
                         <td>{{ $p->patNRM }}</td>
                         <td>{{ $p->patGivenname }} {{ $p->patSurename }}</td>
-                        <td>{{ $p->patSex }}</td>
+                        <td>{{ ($p->patSex) == "L" ? 'Male / Laki-laki' : 'Female / Perempuan' }}</td>
                         <td>{{ $p->patAddres }}</td>
                         <td>
                             <a href="{{ route('patient.detail', $p->patNRM) }}" class="btn btn-sm btn-info">

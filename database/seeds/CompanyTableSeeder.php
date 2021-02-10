@@ -16,8 +16,8 @@ class CompanyTableSeeder extends Seeder
             'name' => 'PT. Alamasan Nusantara',
             'alias' => 'Clinic Persada Nusantara',
             'address' => 'Jl. Raya Nusantara Selatan No. 15',
-            'kabupaten' => 'fake 1',
-            'provinsi' => 'contoh',
+            'kabupaten' => 'Badung',
+            'provinsi' => 'Bali',
             'telphone' => '0361 999876',
         ]);
     }

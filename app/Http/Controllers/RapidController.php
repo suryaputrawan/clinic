@@ -17,7 +17,7 @@ class RapidController extends Controller
 {
     public function index()
     {
-        $rapid = Rapid::orderBy('nosurat', 'DESC')->paginate(50);
+        $rapid = Rapid::orderBy('created_at', 'DESC')->paginate(50);
         $labstaff = Labstaff::all();
         $plebotomis = Plebotomis::all();
         $dokter = Dokter::all();

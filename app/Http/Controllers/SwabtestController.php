@@ -15,7 +15,7 @@ class SwabtestController extends Controller
 {
     public function index()
     {
-        $swabtest = Swabtest::orderBy('nosurat', 'DESC')->paginate(50);
+        $swabtest = Swabtest::orderBy('created_at', 'DESC')->paginate(50);
         $dokter = Dokter::all();
         $patient = Patient::all();
         $nationality = Nationality::all();

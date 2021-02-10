@@ -16,7 +16,7 @@ class AntigenController extends Controller
 {
     public function index()
     {
-        $antigen = Antigen::orderBy('nosurat', 'DESC')->paginate(50);
+        $antigen = Antigen::orderBy('created_at', 'DESC')->paginate(50);
         $patient = Patient::all();
         $labstaff = Labstaff::all();
         $plebotomis = Plebotomis::all();

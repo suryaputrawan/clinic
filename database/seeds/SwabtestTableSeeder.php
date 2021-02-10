@@ -3,7 +3,7 @@
 use App\Swabtest;
 use Illuminate\Database\Seeder;
 
-class SwabTableSeeder extends Seeder
+class SwabtestTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,6 @@ class SwabTableSeeder extends Seeder
      */
     public function run()
     {
-        //seeder
         Swabtest::create([
             'tanggal_sampling' => '2021-01-03',
             'tanggal_validasi' => '2021-01-04',

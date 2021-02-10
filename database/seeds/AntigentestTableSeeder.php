@@ -3,7 +3,7 @@
 use App\Antigen;
 use Illuminate\Database\Seeder;
 
-class AntigenTableSeeder extends Seeder
+class AntigentestTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,6 @@ class AntigenTableSeeder extends Seeder
      */
     public function run()
     {
-        //seeder
         Antigen::create([
             'tanggal' => '2021-01-02',
             'nosurat' => '001/ANTG/I/2021',

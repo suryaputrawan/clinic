@@ -3,7 +3,7 @@
 use App\Rapid;
 use Illuminate\Database\Seeder;
 
-class RapidTableSeeder extends Seeder
+class RapidtestTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
