@@ -14,7 +14,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ route('dokter') }}#">Dokter</a></li>
+                    <li><a href="{{ route('dokter') }}">Dokter</a></li>
                     <li class="active">Input Dokter</li>
                 </ol>
             </div>

@@ -14,7 +14,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a href="#">Laboratorium</a></li>
+                    <li><a href="#">Utilities</a></li>
                     <li><a href="{{ route('labstaff') }}">Lab Staff</a></li>
                     <li class="active">Input Data</li>
                 </ol>
@@ -49,7 +49,11 @@
             @csrf
             <div class="row form-group">
               <div class="col col-md-3"><label for="name" class=" form-control-label">Nama Petugas</label></div>
-              <div class="col-12 col-md-9"><input type="text" id="name" name="name" placeholder="Text" class="form-control"></div>
+              <div class="col-12 col-md-9"><input type="text" id="name" name="name" placeholder="nama petugas" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" autocomplete="off">
+                @error('name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+              </div>
             </div>
             <div class="row form-group">
               <div class="col col-md-3">

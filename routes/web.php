@@ -91,6 +91,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('lab/{laboratorium}/edit', 'LaboratoriumController@edit')->name('lab.edit');
     Route::post('lab/{laboratorium}/update', 'LaboratoriumController@update')->name('lab.update');
 
+    Route::get('nationality', 'NationalityController@index')->name('nation');
+    Route::get('nationality/create', 'NationalityController@create')->name('nation.create');
+    Route::post('nationality/store', 'NationalityController@store')->name('nation.store');
+    Route::get('nationality/{nationality}/edit', 'NationalityController@edit')->name('nation.edit');
+    Route::post('nationality/{nationality}/update', 'NationalityController@update')->name('nation.update');
+
     Route::get('swabtest', 'SwabtestController@index')->name('swabtest');
     Route::get('swabtest/create', 'SwabtestController@create')->name('swabtest.create');
     Route::post('swabtest/store', 'SwabtestController@store')->name('swabtest.store');

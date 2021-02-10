@@ -48,7 +48,11 @@
             @csrf
             <div class="row form-group">
               <div class="col col-md-3"><label for="name" class=" form-control-label">Nama Petugas</label></div>
-              <div class="col-12 col-md-9"><input type="text" id="name" name="name" placeholder="Nama Petugas" class="form-control" autocomplete="off"></div>
+              <div class="col-12 col-md-9"><input type="text" id="name" name="name" placeholder="Nama Petugas" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" autocomplete="off">
+                @error('name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+              </div>
             </div>
             <div class="row form-group">
               <div class="col col-md-3">

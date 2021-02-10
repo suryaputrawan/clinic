@@ -9,6 +9,8 @@ class Nationality extends Model
     protected $table = 'mhStateNation';
     protected $primaryKey = 'nationID';
 
+    protected $fillable = ['nationName'];
+
     public function rapid()
     {
         return $this->hasMany(Rapid::class);

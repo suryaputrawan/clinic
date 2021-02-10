@@ -14,7 +14,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a href="#">Laboratorium</a></li>
+                    <li><a href="#">Utilities</a></li>
                     <li class="active">Lab Staff</li>
                 </ol>
             </div>

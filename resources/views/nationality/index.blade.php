@@ -5,7 +5,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>LABORATORIUM</h1>
+                <h1>Nationality</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li><a href="#">Utilities</a></li>
-                    <li class="active">Laboratorium</li>
+                    <li class="active">Nationality</li>
                 </ol>
             </div>
         </div>
@@ -35,43 +35,38 @@
     <!-- End Flass Message -->
     <div class="card">
       <div class="card-header">
-          <strong class="card-title">Laboratorium</strong>
-          <a href="{{ route('lab.create') }}" class="btn btn-sm btn-primary float-right">Add Data</a>
+          <strong class="card-title">Data Nationality</strong>
+          <a href="{{ route('nation.create') }}" class="btn btn-sm btn-primary float-right">Add Data</a>
       </div>
       <div class="card-body table-responsive">
-        @if ($laboratorium->count())
+        @if ($nationality->count())
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">No</th>
-                <th scope="col">NAMA Laboratorium</th>
-                <th scope="col">ALAMAT</th>
-                <th scope="col">TELPHONE</th>
+                <th scope="col">NATION</th>
                 <th scope="col">ACTION</th>
             </tr>
             </thead>
             <tbody>
-              @foreach ($laboratorium as $key => $l)
+              @foreach ($nationality as $key => $nation)
                 <tr>
-                  <td>{{ $laboratorium->firstItem() + $key }}</td>
-                  <td>{{ $l->name }}</td>
-                  <td>{{ $l->address }}</td>
-                  <td>{{ $l->telphone }}</td>
+                  <td>{{ $nationality->firstItem() + $key }}</td>
+                  <td>{{ $nation->nationName }}</td>
                   <td>
-                    <a href="{{ route('lab.edit', $l->id) }}" class="btn btn-sm btn-primary">
-                      <i class="fa fa-edit"></i>
-                    </a>
+                    <a href="{{ route('nation.edit', $nation->nationID) }}" class="btn btn-sm btn-primary">
+                        <i class="fa fa-edit"></i></a>
                   </td>
                 </tr>
               @endforeach
             </tbody>
-          </table>  
+          </table>
         @else
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">No</th>
-                <th scope="col">NAMA STAFF</th>
+                <th scope="col">NATION</th>
             </tr>
             </thead>
             <tbody>
@@ -82,12 +77,11 @@
             </tbody>
           </table> 
         @endif
-
       </div>
       <!-- Pagination Start -->
       <div class="d-flex justify-content-center">
         <div>
-            {{ $laboratorium->links() }}
+            {{ $nationality->links() }}
         </div>
       </div>
       <!-- Pagination End -->
