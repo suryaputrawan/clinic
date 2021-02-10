@@ -46,7 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('dokter/{dokter}/delete', 'DokterController@delete')->name('dokter.delete');
     Route::get('dokter/{dokter}/detail', 'DokterController@detail')->name('dokter.detail');
 
-    Route::get('search/patient/{keyword?}', 'SearchController@patient')->name('search.patient');
+    Route::get('search/patient', 'SearchController@patient')->name('search.patient');
     Route::get('search/swabtest', 'SearchController@swabtest')->name('search.swabtest');
     Route::get('search/rapidtest', 'SearchController@rapidtest')->name('search.rapidtest');
     Route::get('search/antigen', 'SearchController@antigen')->name('search.antigen');

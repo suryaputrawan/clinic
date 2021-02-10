@@ -13,7 +13,7 @@
                 <i class="fa fa-search"></i>
               </button>
             </div>
-            <input type="text" value="{{ Request::get('keyword') }}" name="keyword" placeholder="Search MRN / PATIENT NAME" class="form-control" autocomplete="off">
+            <input type="text" name="keyword" placeholder="Search NRM / PATIENT NAME" class="form-control" autocomplete="off">
           </div>
         </div>
       </div>
@@ -35,7 +35,6 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a href="#">Utilities</a></li>
                     <li class="active">Patients</li>
                 </ol>
             </div>
@@ -65,8 +64,7 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">NRM</th>
-                        <th scope="col">SURENAME</th>
-                        <th scope="col">GIVEN NAME</th>
+                        <th scope="col">PATIENT NAME</th>
                         <th scope="col">SEX</th>
                         <th scope="col">ADDRESS</th>
                         <th scope="col">ACTION</th>
@@ -77,8 +75,7 @@
                         <tr>
                         <td>{{ $patient->firstItem() + $key }}</td>
                         <td>{{ $p->patNRM }}</td>
-                        <td>{{ $p->patSurename }}</td>
-                        <td>{{ $p->patGivenname }}</td>
+                        <td>{{ $p->patGivenname }} {{ $p->patSurename }}</td>
                         <td>{{ $p->patSex }}</td>
                         <td>{{ $p->patAddres }}</td>
                         <td>
@@ -99,11 +96,9 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">NRM</th>
-                        <th scope="col">SURENAME</th>
-                        <th scope="col">GIVEN NAME</th>
+                        <th scope="col">PATIENT NAME</th>
                         <th scope="col">SEX</th>
                         <th scope="col">ADDRESS</th>
-                        <th scope="col">ACTION</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -64,7 +64,7 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="patient_patNRM" class=" form-control-label">NRM Patient</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="patient_patNRM" name="patient_patNRM" placeholder="Masukkan 6 angka MRN Patient" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM') }}" autocomplete="off">
+            <div class="col-12 col-md-9"><input type="text" id="patient_patNRM" name="patient_patNRM" placeholder="Masukkan NRM Patient yang telah di input di modul patient" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM') }}" autocomplete="off">
               @error('patient_patNRM')
                 <div class="invalid-feedback">{{ "Data tidak boleh kosong dan harus 6 angka dimasukkan" }}</div>
               @enderror

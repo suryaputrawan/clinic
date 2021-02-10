@@ -13,7 +13,7 @@
                 <i class="fa fa-search"></i>
               </button>
             </div>
-            <input type="text" id="keyword" name="keyword" placeholder="Search No Surat / MRN / Patient Name / Result" class="form-control" autocomplete="off">
+            <input type="text" id="keyword" name="keyword" placeholder="Search No Surat / NRM / Patient Name / Result" class="form-control" autocomplete="off">
           </div>
         </div>
       </div>

@@ -64,7 +64,7 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="nrm" class=" form-control-label">NRM Patient</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="nrm" name="patient_patNRM" placeholder="NRM" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM', $rapid->patient_patNRM) }}" autocomplete="off">
+            <div class="col-12 col-md-9"><input type="text" id="nrm" name="patient_patNRM" placeholder="Masukkan NRM Patient yang telah di input di modul patient" class="form-control @error('patient_patNRM') is-invalid @enderror" value="{{ old('patient_patNRM', $rapid->patient_patNRM) }}" autocomplete="off">
               @error('patient_patNRM')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror
