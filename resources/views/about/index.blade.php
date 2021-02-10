@@ -65,11 +65,10 @@
                                     telah di input pada modul patient.
                                 </li>
                                 <li>
-                                    Jika terjadi kesalahan, dapat melakukan edit pada kolom action.
+                                    Jika terjadi kesalahan, dapat melakukan edit pada kolom action, dengan menekan gambar pensil.
                                 </li>
                                 <li>
-                                    Untuk Mencetak surat hasil pemeriksaan, dengan menekan tombol view terlebih dahulu pada 
-                                    kolom action, kemudian tekan tombol Print Surat Keterangan.
+                                    Untuk Mencetak surat hasil pemeriksaan, dapat dengan cara menekan gambar print pada kolom action.
                                 </li>
                                 <li>
                                     Isi data Perusahaan anda terlebih dahulu pada modul profil company, dimana nantinya data tersebut untuk kebutuhan 
@@ -95,7 +94,7 @@
                         <div>
                             <h6 class="text-sm-center mt-2 mb-1">
                                 Saat aplikasi ini dibuat, saya baru semester 3 dan baru mengenal dunia pemrograman, dan mengenal laravel.
-                                Baru diijinkan tuhan untuk merasakan dunia perkuliahan walaupun umur telah di Kepala 3.
+                                Baru diijinkan tuhan untuk merasakan dunia perkuliahan walaupun umur telah di kepala 3.
                             </h6>
                         </div>
                     </div>

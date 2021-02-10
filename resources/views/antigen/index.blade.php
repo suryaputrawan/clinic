@@ -109,12 +109,14 @@
                     <!-- End Menampilkan nama data dari tabel lain -->
                     <td>{{ $item->result }} </td>
                     <td>
-                      <a href="{{ route('antigen.detail',$item->id) }}" class="btn btn-sm btn-info">
+                      <a href="{{ route('antigen.detail',$item->id) }}" class="btn btn-sm btn-outline-info">
                         <i class="fa fa-eye"></i>
                       </a>
-                      <a href="{{ route('antigen.edit', $item->id) }}" class="btn btn-sm btn-primary">
+                      <a href="{{ route('antigen.edit', $item->id) }}" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-edit"></i>
                       </a>
+                      <a href="{{ route('antigen.exportPdf', $item->id) }}" class="btn btn-sm btn-outline-secondary" target="_blank">
+                        <i class="fa fa-print"></i></a>
                       <!-- <a href="#" class="btn btn-sm btn-danger">
                         <i class="fa fa-trash"></i>
                       </a> -->

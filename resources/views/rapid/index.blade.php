@@ -108,11 +108,14 @@
                     <!-- End Menampilkan nama data dari tabel lain -->
                     <td>{{ $r->result }} </td>
                     <td>
-                      <a href="{{ route('rapidtest.detail', $r->id) }}" class="btn btn-sm btn-info">
-                        <i class="fa fa-eye"></i>
+                      <!-- <a href="{{ route('rapidtest.detail', $r->id) }}" class="btn btn-sm btn-outline-info">
+                        <i class="fa fa-eye"></i> -->
                       </a>
-                      <a href="{{ route('rapidtest.edit', $r->id) }}" class="btn btn-sm btn-primary">
+                      <a href="{{ route('rapidtest.edit', $r->id) }}" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-edit"></i>
+                      </a>
+                      <a href="{{ route('rapidtest.exportPdf', $r->id) }}" class="btn btn-sm btn-outline-secondary" target="_blank">
+                        <i class="fa fa-print"></i>
                       </a>
                       <!-- <a href="{{ route('rapidtest.delete', $r->id) }}" class="btn btn-sm btn-danger">
                         <i class="fa fa-trash"></i>

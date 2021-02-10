@@ -108,12 +108,14 @@
                     <!-- End Menampilkan nama data dari tabel lain -->
                     <td>{{ $s->result }} </td>
                     <td>
-                      <a href="{{ route('swabtest.detail', $s->id) }}" class="btn btn-sm btn-info">
+                      <a href="{{ route('swabtest.detail', $s->id) }}" class="btn btn-sm btn-outline-info">
                         <i class="fa fa-eye"></i>
                       </a>
-                      <a href="{{ route('swabtest.edit', $s->id) }}" class="btn btn-sm btn-primary">
+                      <a href="{{ route('swabtest.edit', $s->id) }}" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-edit"></i>
                       </a>
+                      <a href="{{ route('swabtest.exportPdf', $s->id) }}" class="btn btn-sm btn-outline-secondary" target="_blank">
+                        <i class="fa fa-print"></i></a>
                       <!-- <a href="{{ route('swabtest.delete', $s->id) }}" class="btn btn-sm btn-danger">
                         <i class="fa fa-trash"></i> -->
                       </a>
