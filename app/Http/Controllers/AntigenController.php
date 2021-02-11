@@ -56,11 +56,11 @@ class AntigenController extends Controller
         $antigen->patient_patNRM = $request->patient_patNRM;
 
         if (Antigen::where('nosurat', $antigen->nosurat)->first() != Null) {
-            return redirect()->route('antigen.create')->with('error', 'No Surat sudah ada, Masukkan nomor yang lain !');
+            return redirect()->route('antigen.create')->with('error', 'No Surat ' . $request->nosurat . ' sudah ada, Masukkan nomor yang lain !');
         }
 
         if (Patient::where('patNRM', $antigen->patient_patNRM)->first() == Null) {
-            return redirect()->route('antigen.create')->with('error', 'No NRM SALAH !');
+            return redirect()->route('antigen.create')->with('error', 'No NRM ' . $request->patient_patNRM . ' Salah atau belum terdaftar pada modul patient !');
         }
 
         //Insert ke tabel antigenswab

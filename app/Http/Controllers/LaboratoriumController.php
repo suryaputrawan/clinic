@@ -28,7 +28,7 @@ class LaboratoriumController extends Controller
         $lab = new Laboratorium();
         $lab->name = $request->name;
         if (Laboratorium::where('name', $lab->name)->first() != Null) {
-            return redirect()->route('lab.create')->with('error', 'Nama Laboratorium Sudah Ada, Silahkan masukkan nama Laboratorium yang lain..');
+            return redirect()->route('lab.create')->with('error', 'Nama Laboratorium ' . $request->name . ' Sudah Ada, Silahkan masukkan nama Laboratorium yang lain..');
         }
 
         Laboratorium::create($request->all());

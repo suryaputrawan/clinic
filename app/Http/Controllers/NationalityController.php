@@ -31,7 +31,7 @@ class NationalityController extends Controller
         $nation->nationName = $request->name;
 
         if (Nationality::where('nationName', $nation->nationName)->first() != Null) {
-            return redirect()->route('nation.create')->with('error', 'Nama Negara Sudah Ada, Silahkan masukkan nama negara yang lain..');
+            return redirect()->route('nation.create')->with('error', 'Nama Negara ' . $request->name . ' Sudah Ada, Silahkan masukkan nama negara yang lain..');
         }
 
         Nationality::create([

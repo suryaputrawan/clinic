@@ -11,7 +11,7 @@ class PatientController extends Controller
 {
     public function index()
     {
-        $patient = Patient::orderBy('created_at', 'DESC')->paginate(50);
+        $patient = Patient::orderBy('patNRM', 'DESC')->paginate(50);
         return view('patient.index', compact('patient'));
     }
 
@@ -40,6 +40,15 @@ class PatientController extends Controller
             'sex.required' => 'Pilih salah satu data',
             'nationality_nationID.required' => 'Pilih salah satu data',
         ]);
+
+        $p = new Patient();
+        $p->patNRM = $request->patnrm;
+
+        if (Patient::where('patNRM', $p->patNRM)->first() != Null) {
+            $patient = Patient::where('patNRM', $request->patnrm)->paginate();
+
+            return redirect()->route('patient')->with('error', 'NRM Patient ' . $request->patnrm . ' sudah ada !');
+        }
 
         // Memanggil tanggal perhari ini
         $date = Carbon::now()->format('Y-m-d');

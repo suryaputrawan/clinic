@@ -28,7 +28,7 @@ class LabstaffController extends Controller
         $labstaff = new Labstaff();
         $labstaff->name = $request->name;
         if (Labstaff::where('name', $labstaff->name)->first() != Null) {
-            return redirect()->route('labstaff.create')->with('error', 'Nama Petugas Sudah Ada, Silahkan masukkan nama petugas yang lain..');
+            return redirect()->route('labstaff.create')->with('error', 'Nama Petugas ' . $request->name . ' Sudah Ada, Silahkan masukkan nama petugas yang lain..');
         }
 
         Labstaff::create($request->all());

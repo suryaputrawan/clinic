@@ -62,11 +62,11 @@ class RapidController extends Controller
         $r->patient_patNRM = $request->patient_patNRM;
 
         if (Rapid::where('nosurat', $r->nosurat)->first() != Null) {
-            return redirect()->route('rapidtest.create')->with('error', 'No Surat sudah ada, Masukkan nomor yang lain !');
+            return redirect()->route('rapidtest.create')->with('error', 'No Surat ' . $request->nosurat . ' sudah ada, Masukkan nomor yang lain !');
         }
 
         if (Patient::where('patNRM', $r->patient_patNRM)->first() == Null) {
-            return redirect()->route('rapidtest.create')->with('error', 'No NRM SALAH !');
+            return redirect()->route('rapidtest.create')->with('error', 'No NRM ' . $request->patient_patNRM . ' Salah atau belum terdaftar pada modul Patient !');
         }
 
         //Insert ke tabel rapidtest

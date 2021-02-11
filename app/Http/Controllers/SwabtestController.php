@@ -56,11 +56,11 @@ class SwabtestController extends Controller
         $s->patient_patNRM = $request->patient_patNRM;
 
         if (Swabtest::where('nosurat', $s->nosurat)->first() != Null) {
-            return redirect()->route('swabtest.create')->with('error', 'No Surat sudah ada, Masukkan nomor yang lain !');
+            return redirect()->route('swabtest.create')->with('error', 'No Surat ' . $request->nosurat . ' sudah ada, Masukkan nomor yang lain !');
         }
 
         if (Patient::where('patNRM', $s->patient_patNRM)->first() == Null) {
-            return redirect()->route('swabtest.create')->with('error', 'No NRM SALAH !');
+            return redirect()->route('swabtest.create')->with('error', 'No NRM ' . $request->patient_patNRM . ' Salah atau belum terdaftar pada modul Patient !');
         }
 
         // Insert ke tabel swabtest

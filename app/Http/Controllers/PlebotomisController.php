@@ -29,7 +29,7 @@ class PlebotomisController extends Controller
         $plebo = new Plebotomis();
         $plebo->name = $request->name;
         if (Plebotomis::where('name', $plebo->name)->first() != Null) {
-            return redirect()->route('plebotomis.create')->with('error', 'Nama Petugas Sudah Ada, Silahkan masukkan nama petugas yang lain..');
+            return redirect()->route('plebotomis.create')->with('error', 'Nama Petugas ' . $request->name . ' Sudah Ada, Silahkan masukkan nama petugas yang lain..');
         }
 
         Plebotomis::create([

@@ -64,7 +64,7 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="surename" class=" form-control-label">Surename</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="surename" name="surename" placeholder="Insert Surename Patient" class="form-control @error('surename') is-invalid @enderror" value="{{ old('surename') }}" autocomplete="off">
+            <div class="col-12 col-md-9"><input type="text" id="surename" name="surename" placeholder="Surename Patient" class="form-control @error('surename') is-invalid @enderror" value="{{ old('surename') }}" autocomplete="off">
               @error('surename')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror
@@ -72,7 +72,7 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3"><label for="givenname" class=" form-control-label">Givenname</label></div>
-            <div class="col-12 col-md-9"><input type="text" id="givenname" name="givenname" placeholder="Insert Givenname Patient" class="form-control @error('givenname') is-invalid @enderror" value="{{ old('givenname') }}" autocomplete="off">
+            <div class="col-12 col-md-9"><input type="text" id="givenname" name="givenname" placeholder="Givenname Patient" class="form-control @error('givenname') is-invalid @enderror" value="{{ old('givenname') }}" autocomplete="off">
               @error('givenname')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror

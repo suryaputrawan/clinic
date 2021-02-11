@@ -29,6 +29,13 @@ class DokterController extends Controller
             'name.required' => 'Masukkan Nama Dokter',
         ]);
 
+        $dok = new Dokter();
+        $dok->doktername = $request->name;
+
+        if (Dokter::where('doktername', $dok->doktername)->first() != Null) {
+            return redirect()->route('dokter.create')->with('error', 'Nama Dokter ' . $request->name . ' Sudah Ada, Silahkan masukkan nama yang lain..');
+        }
+
         Dokter::create([
             'doktername' => $request->name,
             'dokterAddr' => $request->address,

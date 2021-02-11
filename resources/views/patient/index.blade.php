@@ -46,6 +46,18 @@
 @section('content')
 <div class="content mt-3">
   <div class="animated fadeIn">
+      <!-- Flass Message -->
+      @if (session('sukses'))
+      <div class="alert alert-primary" role="alert">
+        {{ session('sukses') }}
+      </div> 
+      @endif
+      @if (session('error'))
+      <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+      </div> 
+      @endif
+      <!-- End Flass Message -->
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
