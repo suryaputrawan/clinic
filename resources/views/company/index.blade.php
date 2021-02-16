@@ -38,7 +38,7 @@
       </div>
       <div class="card-body table-responsive">
         @if ($company->count())
-          <table class="table">
+          <table class="table" id="myTable">
             <thead>
               <tr>
                 <th scope="col">No</th>

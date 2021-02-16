@@ -80,7 +80,7 @@
         </div>
         <div class="card-body table-responsive">
           @if ($swabtest->count())
-            <table class="table">
+            <table class="table" id="myTable">
               <thead>
                 <tr>
                   <th scope="col">No</th>
@@ -144,16 +144,7 @@
               </tbody>
             </table>
           @endif
-          <strong>Total Data : {{ $swabtest->total() }}</strong><br>
-          <strong>Page {{ $swabtest->currentPage() }} of {{ $swabtest->lastPage() }}</strong>
         </div>
-        <!-- Pagination Start -->
-        <div class="d-flex justify-content-center">
-          <div>
-              {{ $swabtest->links() }}
-          </div>
-        </div>
-        <!-- Pagination End -->
       </div>
     </div>
   </div>

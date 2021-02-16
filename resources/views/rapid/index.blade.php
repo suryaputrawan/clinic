@@ -80,7 +80,7 @@
         </div>
         <div class="card-body table-responsive">
           @if ($rapid->count()) <!-- Membuat kondisi jika belum ada data di database -->
-            <table class="table">
+            <table class="table" id="myTable">
               <thead>
                 <tr>
                   <th scope="col">No</th>
@@ -145,16 +145,7 @@
               </tbody>
             </table> 
           @endif
-          <strong>Total Data : {{ $rapid->total() }}</strong><br>
-          <strong>Page {{ $rapid->currentPage() }} of {{ $rapid->lastPage() }}</strong>
         </div>
-        <!-- Pagination Start -->
-        <div class="d-flex justify-content-center">
-          <div>
-              {{ $rapid->links() }}
-          </div>
-        </div>
-        <!-- Pagination End -->
       </div>
     </div>
   </div>

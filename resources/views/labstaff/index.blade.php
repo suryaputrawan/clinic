@@ -40,7 +40,7 @@
       </div>
       <div class="card-body table-responsive">
         @if ($labstaff->count())
-          <table class="table">
+          <table class="table" id="myTable">
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -78,13 +78,6 @@
           </table> 
         @endif
       </div>
-      <!-- Pagination Start -->
-      <div class="d-flex justify-content-center">
-        <div>
-            {{ $labstaff->links() }}
-        </div>
-      </div>
-      <!-- Pagination End -->
     </div>
   </div>
 </div>

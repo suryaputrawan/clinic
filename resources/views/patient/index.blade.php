@@ -71,7 +71,7 @@
           </div>
           <div class="card-body table-responsive">
               @if ($patient->count())
-                <table class="table">
+                <table class="table" id="myTable">
                     <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -120,13 +120,6 @@
               @endif
             
           </div>
-          <!-- Pagination Start -->
-          <div class="d-flex justify-content-center">
-            <div>
-                {{ $patient->links() }}
-            </div>
-          </div>
-          <!-- Pagination End -->
         </div>
       </div>
     </div>
